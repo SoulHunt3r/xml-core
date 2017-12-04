@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!--  custom type definitions start  -->
+    <xs:simpleType name="StatusType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="PASS"/>
+            <xs:enumeration value="FAIL"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="ScreenshotList">
+        <xs:sequence>
+            <xs:element name="SCREENSHOT" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="TestCaseType">
+        <xs:sequence>
+            <xs:element name="NAME" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="STATUS" type="StatusType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="MSG" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="SCREENSHOTS" type="ScreenshotList" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+    <!--  custom type definitions end  -->
+
+    <!--  for comments  -->
+    <xs:element name="TESTSET">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="TEST_SUITE" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="NAME" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="TEST_CASE" type="TestCaseType" minOccurs="0" maxOccurs="unbounded"/>
+                            <xs:element name="STATUS" type="StatusType" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="MSG" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

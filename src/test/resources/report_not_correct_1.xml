@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TESTSET>
+    <TEST_SUITE>
+        <NAME>TestRegression</NAME>
+
+        <TEST_CASE>
+            <NAME>testAxitechTranslationHeaderFooter</NAME>
+            <STATUS>FAIL</STATUS>
+            <MSG>testAxitechTranslationHeaderFooter not implemented</MSG>
+        </TEST_CASE>
+
+        <TEST_CASE>
+            <NAME>testUserControlAvailableModulesModuleNameError1</NAME>
+            <STATUS>FAIL</STATUS>
+            <MSG>testUserControlAvailableModulesModuleNameError1 not implemented</MSG>
+        </TEST_CASE>
+
+        <TEST_CASE>
+            <NAME>testLoginButtonOnMissedPasswordPage</NAME>
+            <STATUS>FAIL</STATUS>
+            <MSG>testLoginButtonOnMissedPasswordPage not implemented</MSG>
+        </TEST_CASE>
+
+        <TEST_CASE>
+            <NAME>testLanguageSelectorTranslationToEnglish</NAME>
+            <STATUS>FAIL</STATUS>
+            <MSG>testLanguageSelectorTranslationToEnglish not implemented</MSG>
+        </TEST_CASE>
+
+        <TEST_CASE>
+            <NAME>testMenuDocumentsPageTitleSyntaxErrorInRussian</NAME>
+            <STATUS>FAIL</STATUS>
+            <MSG>testMenuDocumentsPageTitleSyntaxErrorInRussian not implemented</MSG>
+        </TEST_CASE>
+
+        <TEST_CASE>
+            <NAME>testMenuObjectsPageTitleDoesntContainTextObjects</NAME>
+            <STATUS>FAIL</STATUS>
+            <MSG>testMenuObjectsPageTitleDoesntContainTextObjects not implemented</MSG>
+        </TEST_CASE>
+
+        <TEST_CASE>
+            <NAME>testLanguageSelectorKeepPage</NAME>
+            <STATUS>FAIL</STATUS>
+            <MSG>testLanguageSelectorKeepPage not implemented</MSG>
+        </TEST_CASE>
+
+        <STATUS>FAIL</STATUS>
+        <MSG>failure count: 7</MSG>
+    </TEST_SUITE><!--  end of Test_Suite name = ''  -->
+
+    <TEST_SUITE>
+        <NAME>TestLoginPage</NAME>
+
+        <TEST_CASE>
+            <NAME>testMissedPassword</NAME>
+
+        </TEST_CASE>
+
+        <TEST_CASE>
+            <NAME>testDoLogin</NAME>
+
+        </TEST_CASE>
+
+        <STATUS>PASS</STATUS>
+        <MSG>run_count: 2</MSG>
+    </TEST_SUITE><!--  end of Test_Suite name = ''  -->
+
+</TESTSET>
