@@ -121,4 +121,18 @@
     </dependencies>
     <!-- manual set end -->
 
+    <!-- manual set -->
+    <distributionManagement>
+      <repository>
+        <id>10.174.18.94</id>
+        <url>http://10.174.18.94:8081/nexus/content/repositories/releases</url>
+      </repository>
+      <snapshotRepository>
+        <id>10.174.18.94</id>
+        <url>http://10.174.18.94:8081/nexus/content/repositories/snapshots</url>
+      </snapshotRepository>
+    </distributionManagement>
+    <!-- manual set end -->
+
+    <!-- project end -->
 </project>
