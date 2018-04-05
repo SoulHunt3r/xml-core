@@ -123,14 +123,16 @@
 
     <!-- manual set -->
     <distributionManagement>
-      <repository>
-        <id>10.174.18.94</id>
-        <url>http://10.174.18.94:8081/nexus/content/repositories/releases</url>
-      </repository>
-      <snapshotRepository>
-        <id>10.174.18.94</id>
-        <url>http://10.174.18.94:8081/nexus/content/repositories/snapshots</url>
-      </snapshotRepository>
+        <repository>
+            <id>10.174.18.94</id>
+            <name>Releases</name>
+            <url>http://10.174.18.94:8081/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>10.174.18.94</id>
+            <name>Snapshot</name>
+            <url>http://10.174.18.94:8081/repository/maven-snapshots</url>
+        </snapshotRepository>
     </distributionManagement>
     <!-- manual set end -->
 
