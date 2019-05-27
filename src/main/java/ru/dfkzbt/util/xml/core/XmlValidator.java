@@ -38,7 +38,7 @@ import java.io.IOException;
 public class XmlValidator {
     private final static Logger logger = LoggerFactory.getLogger(XmlValidator.class);
 
-    public static boolean validateXmlFile(String xmlFilename, String xsdFilename) {
+    public static void validateXmlFileInternal(String xmlFilename, String xsdFilename) throws IOException, SAXException {
         String methodWeAreIn = new Throwable().getStackTrace()[0].getMethodName();
 
         // check for null and empty
@@ -79,12 +79,25 @@ public class XmlValidator {
             validator.validate(new StreamSource(xmlFile));
             //
         } catch (SAXException | IOException ex) {
-            logger.error("{} Got exception while processing file: {}", methodWeAreIn, ex.toString());
+            logger.debug("{} Got exception while processing file: {}", methodWeAreIn, ex.toString());
             logger.trace("{} StackTrace: {}", methodWeAreIn, ex);
-            return false;
+            throw ex;
         }
 
         logger.debug("{} Validate successful.", methodWeAreIn);
+    }
+
+    public static boolean validateXmlFile(String xmlFilename, String xsdFilename) {
+        String methodWeAreIn = new Throwable().getStackTrace()[0].getMethodName();
+
+        try {
+            validateXmlFileInternal(xmlFilename, xsdFilename);
+        } catch (SAXException | IOException e) {
+            logger.error("{} Got exception while processing file: {}", methodWeAreIn, e.toString());
+            logger.trace("{} StackTrace: {}", methodWeAreIn, e);
+            return false;
+        }
+
         return true;
     }
 }
