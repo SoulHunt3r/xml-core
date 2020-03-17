@@ -21,7 +21,7 @@
     <groupId>ru.dfkzbt.util.xml</groupId>
     <artifactId>xml-core</artifactId>
     <packaging>jar</packaging>
-    <version>0.1</version>
+    <version>0.2-SNAPSHOT</version>
 
     <name>xml-core</name>
     <url>http://maven.apache.org</url>
